@@ -4,7 +4,7 @@ from flask import Flask, Response, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 def turn_counterclockwise(direction): #L
   if direction == "North":
@@ -67,5 +67,5 @@ def calculate_route():
   return Response(dumps(coordinate_data), mimetype="application/json")
 
 
-#if __name__ == '__main__':
-#  app.run(port=5000)
+if __name__ == '__main__':
+  app.run(port=5000)
