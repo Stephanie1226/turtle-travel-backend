@@ -64,9 +64,4 @@ def calculate_route():
     else: # element == "F"
       x_loc, y_loc, coordinate_data = move_forward(x_loc, y_loc, direction, coordinate_data)
   
-  response = jsonify(coordinate_data)
-  response.headers.add('Access-Control-Allow-Origin', '*')
-
-  return response
-  
-  #return Response(dumps(coordinate_data), mimetype="application/json")
+  return Response(dumps(coordinate_data), mimetype="application/json")
